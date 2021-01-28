@@ -1,7 +1,11 @@
 ---
 - name: A demo playbook for Ansible Towers
   hosts: all
+  vars_prompt:
+    - name: username
+      prompt: "Please enter your username: "
+      private: no
   tasks:
   - name: "First contact"
     debug:
-      msg: "Hello Ansible Tower!!!"
+      msg: "Hello {{ username }}. Welcome to Ansible Tower!!!"
