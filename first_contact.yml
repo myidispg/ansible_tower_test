@@ -1,0 +1,7 @@
+---
+- name: A demo playbook for Ansible Towers
+  hosts: all
+  tasks:
+  - name: "First contact"
+    debug:
+      msg: "Hello Ansible Tower!!!"
